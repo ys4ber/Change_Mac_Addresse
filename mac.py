@@ -1,8 +1,14 @@
+#!/usr/bin/python3
+
 import os
 import random
 import string
 
-interface = 'wlp3s0'
+
+# Set Here Your Interface Name :
+
+
+interface = 'INTERFACE'
 
 def random_mac():
 
@@ -12,8 +18,6 @@ def random_mac():
            random.randint(0x00,0xff),
            random.randint(0x00,0xff)]
     return ':'.join(format(x, '02x') for x in mac)
-
-
 
 new_mac = random_mac()
 
